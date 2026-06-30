@@ -13,3 +13,15 @@ body {
 html.dark body {
   @apply bg-slate-900 text-white;
 }
+
+.gradient-hero {
+  background: radial-gradient(ellipse at 20% 50%, rgba(79, 70, 229, 0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
+              #fafbfc;
+}
+
+.dark .gradient-hero {
+  background: radial-gradient(ellipse at 20% 50%, rgba(79, 70, 229, 0.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+              #0f172a;
+}
