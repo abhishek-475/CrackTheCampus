@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { companies } from "../../data/companies";
+import { companies } from "../../../data/companies";
 
 function Companies() {
   return (

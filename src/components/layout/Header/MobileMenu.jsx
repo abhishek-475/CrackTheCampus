@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import ThemeToggle from "../ui/ThemeToggle";
+import ThemeToggle from "../../ui/ThemeToggle";
 import { AnimatePresence, motion } from "framer-motion";
-import Button from "../ui/Button";
-import navigation from "../../data/navigation";
+import Button from "../../ui/Button";
+import navigation from "../../../data/navigation";
 
 
 function MobileMenu() {

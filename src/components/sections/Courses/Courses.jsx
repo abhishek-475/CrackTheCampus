@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, Users } from "lucide-react";
-import { courses } from "../../data/courses";
+import { courses } from "../../../data/courses";
 
 export default function Courses() {
     return (

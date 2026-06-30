@@ -1,79 +1,119 @@
-# CrackTheCampus - Frontend Developer Assignment
+# CrackTheCampus - Frontend Landing Page
 
-## 🚀 Overview
-CrackTheCampus is a platform designed to help students prepare for placements, internships, and competitive aptitude tests.  
-This project is a **frontend landing page** built from scratch using **React + Tailwind CSS**, showcasing product design intuition, engineering proficiency, and attention to detail.
+A modern, fully responsive SaaS-style landing page built for a frontend developer assessment. The project simulates a real-world edtech platform designed to help students prepare for placements, aptitude tests, and technical interviews.
 
 ---
 
-## 🖼️ Features Implemented
-- **Hero Section**: Impactful headline, description, CTA buttons, modern illustration.
-- **Features Section**: Six+ core capabilities in a clean card layout.
-- **Statistics Section**: Placement rates and success metrics with styled numerics.
-- **Testimonials Section**: Authentic student success stories.
-- **Companies Section**: Logos of hiring partners.
-- **Courses/Test Series Section**: Highlighted preparation paths.
-- **Footer**: Structured navigation, contact info, social links.
+## 🚀 Live Demo
+https://crack-the-campus.vercel.app/
 
 ---
 
-## ⚙️ Tech Stack
-- **Framework**: React (CRA / Next.js if used)
-- **Styling**: Tailwind CSS (utility-first, responsive variants)
-- **Deployment**: Vercel / Netlify
-- **Version Control**: GitHub
+
+## 🧠 Project Overview
+
+CrackTheCampus is a placement preparation platform UI built with a strong focus on:
+
+- Modern SaaS design principles
+- Component-based architecture
+- Smooth micro-interactions
+- Fully responsive layouts
+- Accessibility and semantic HTML
+- Production-level Tailwind CSS usage
 
 ---
 
-## 📂 Folder Structure
+## 🛠️ Tech Stack
 
-CrackTheCampus/
-├── public/
-│   ├── assets/        # Images, logos, icons
-├── src/
-│   ├── components/    # Reusable UI components
-│   ├── pages/         # Page-level components
-│   ├── styles/        # Tailwind config + global styles
-│   ├── hooks/         # Custom hooks (if any)
-│   ├── utils/         # Helper functions
-│   └── App.js
-└── README.md
+- React.js (Vite)
+- Tailwind CSS
+- Framer Motion
+- Lucide React Icons
+- React Icons
+
+---
+
+## 📁 Folder Structure
+
+src/
+│── components/
+│ ├── layout/
+│ ├── sections/
+│ ├── ui/
+│
+│── data/
+│── hooks/
+│── utils/
+│── styles/
 
 
 ---
 
-## 🧩 Component Strategy
-- **Reusable UI Components**: Buttons, Cards, Testimonials, Stats, Footer.
-- **Responsive Design**: Mobile-first workflow with Tailwind breakpoints.
-- **Accessibility**: Semantic HTML, ARIA labels, keyboard navigation.
+## ✨ Features Implemented
+
+### 🎯 Hero Section
+- Strong SaaS-style headline
+- Background image with overlay
+- CTA buttons with hover animations
+
+### ⚡ Features Section
+- 6+ core platform capabilities
+- Card-based responsive grid
+- Framer Motion animations
+
+### 📊 Stats Section
+- Animated count-up statistics
+- Gradient typography
+- Floating background effects
+
+### 💬 Testimonials Section
+- Auto-scrolling carousel
+- Drag interaction support
+- Verified student reviews
+
+### 🏢 Companies Section
+- Grid of top recruiters
+- Hover animations
+- Grayscale → color transitions
+
+### 📚 Courses Section
+- Structured learning paths
+- Image + content split layout
+- Topic-based learning structure
+
+### 🧭 Footer Section
+- Multi-column layout
+- Social media integration
+- Contact information
+- Legal links
 
 ---
 
-## 📊 Evaluation Highlights
-- **Design & UX (40%)**: Premium typography, spacing rhythm, mobile experience.
-- **Tailwind CSS (20%)**: Clean utility usage, responsive variants.
-- **Code Quality (20%)**: Modular structure, semantic naming, no duplication.
-- **Frontend Engineering (10%)**: Accessibility, performant rendering.
-- **Extra Initiative (10%)**: Dark mode, hover states, transitions, skeleton loaders.
+## 🎯 Key Highlights
+
+- Fully responsive (Mobile / Tablet / Desktop)
+- Component-driven architecture
+- Reusable UI system
+- Clean folder structure
+- Performance optimized
+- Dark mode support
+- Smooth animations with Framer Motion
 
 ---
 
-## 🌟 Extra Features
-- Dark mode toggle 🌙
-- Smooth hover/active transitions ✨
-- Loading skeletons for better UX ⏳
-- Mobile drawer navigation 📱
+## 📦 Installation
 
----
+```bash
+npm install
+npm run dev
 
-## 📡 Deployment
-- **Live Demo**: [https://crack-the-campus.vercel.app](https://crack-the-campus.vercel.app/)
-- **GitHub Repo**: [https://github.com/abhishek-475/CrackTheCampus](https://github.com/abhishek-475/CrackTheCampus)
 
----
 
-## 📞 Contact
-- **Developer**: Abhishek Pavithran  
-- **Email**: abhishekpavi6@gmail.com  
-- **Location**: Kerala, India  
+👨‍💻 Author
 
+Abhishek Pavithran
+Frontend Developer
+
+📜 License
+
+This project is created for educational and assessment purposes.

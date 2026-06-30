@@ -1,5 +1,5 @@
 import { useState } from "react";
-import navigation from "../../data/navigation";
+import navigation from "../../../data/navigation";
 
 function Navbar() {
     const [active, setActive] = useState("features");

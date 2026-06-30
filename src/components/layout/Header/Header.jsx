@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
-import ThemeToggle from "../ui/ThemeToggle";
-import Button from "../ui/Button";
+import ThemeToggle from "../../ui/ThemeToggle";
+import Button from "../../ui/Button";
 import MobileMenu from "./MobileMenu";
 
 export default function Header() {

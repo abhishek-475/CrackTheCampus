@@ -1,11 +1,11 @@
-import Hero from "./components/sections/Hero"
-import Header from "./components/layout/Header"
-import Stats from "./components/sections/Stats"
-import Features from "./components/sections/Features"
-import Testimonials from "./components/sections/Testimonials"
-import Companies from "./components/sections/Companies"
-import Courses from "./components/sections/Courses"
-import Footer from "./components/layout/Footer"
+import Hero from "./components/sections/Hero/Hero"
+import Header from "./components/layout/Header/Header"
+import Stats from "./components/sections/Stats/Stats"
+import Features from "./components/sections/Features/Features"
+import Testimonials from "./components/sections/Testmonials/Testimonials"
+import Companies from "./components/sections/Companies/Companies"
+import Courses from "./components/sections/Courses/Courses"
+import Footer from "./components/layout/Footer/Footer"
 
 function App() {
 

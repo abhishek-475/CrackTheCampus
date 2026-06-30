@@ -40,35 +40,18 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    {
-      icon: FaLinkedin,
-      href: "https://linkedin.com",
-    },
-    {
-      icon: FaInstagram,
-      href: "https://instagram.com",
-    },
-    {
-      icon: FaXTwitter,
-      href: "https://twitter.com",
-    },
-    {
-      icon: FaYoutube,
-      href: "https://youtube.com",
-    },
-    {
-      icon: FaFacebook,
-      href: "https://facebook.com",
-    },
-    {
-      icon: FaGithub,
-      href: "https://github.com",
-    },
+    { icon: FaLinkedin, href: "https://linkedin.com" },
+    { icon: FaInstagram, href: "https://instagram.com" },
+    { icon: FaXTwitter, href: "https://twitter.com" },
+    { icon: FaYoutube, href: "https://youtube.com" },
+    { icon: FaFacebook, href: "https://facebook.com" },
+    { icon: FaGithub, href: "https://github.com" },
   ];
 
   return (
     <footer
       id="footer"
+      aria-label="Footer section"
       className="bg-slate-950 text-slate-300 border-t border-slate-800"
     >
       <div className="max-w-7xl mx-auto px-6 py-20">
@@ -76,7 +59,6 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-5">
 
           {/* Brand */}
-
           <div className="lg:col-span-2">
 
             <h2 className="text-3xl font-bold text-white">
@@ -90,7 +72,6 @@ export default function Footer() {
             </p>
 
             {/* Contact */}
-
             <div className="mt-8 space-y-4 text-sm">
 
               <div className="flex items-center gap-3">
@@ -111,7 +92,6 @@ export default function Footer() {
             </div>
 
             {/* Social */}
-
             <div className="flex flex-wrap gap-3 mt-8">
 
               {socialLinks.map((item, index) => {
@@ -123,9 +103,7 @@ export default function Footer() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-xl border border-slate-800
-                    hover:border-blue-500 hover:bg-blue-600
-                    transition flex items-center justify-center"
+                    className="w-10 h-10 rounded-xl border border-slate-800 hover:border-blue-500 hover:bg-blue-600 hover:text-white transition flex items-center justify-center"
                   >
                     <Icon size={18} />
                   </a>
@@ -137,102 +115,62 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-
           <div>
-
-            <h3 className="font-semibold text-white mb-5">
-              Quick Links
-            </h3>
-
+            <h3 className="font-semibold text-white mb-5">Quick Links</h3>
             <ul className="space-y-3">
-
               {quickLinks.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-sm text-slate-400 hover:text-white transition"
-                  >
+                  <a className="text-sm text-slate-400 hover:text-white transition" href={item.href}>
                     {item.name}
                   </a>
                 </li>
               ))}
-
             </ul>
-
           </div>
 
           {/* Resources */}
-
           <div>
-
-            <h3 className="font-semibold text-white mb-5">
-              Resources
-            </h3>
-
+            <h3 className="font-semibold text-white mb-5">Resources</h3>
             <ul className="space-y-3">
-
               {resources.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-sm text-slate-400 hover:text-white transition"
-                  >
+                  <a className="text-sm text-slate-400 hover:text-white transition" href={item.href}>
                     {item.name}
                   </a>
                 </li>
               ))}
-
             </ul>
-
           </div>
 
           {/* Support */}
-
           <div>
-
-            <h3 className="font-semibold text-white mb-5">
-              Support
-            </h3>
-
+            <h3 className="font-semibold text-white mb-5">Support</h3>
             <ul className="space-y-3">
-
               {support.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="text-sm text-slate-400 hover:text-white transition"
-                  >
+                  <a className="text-sm text-slate-400 hover:text-white transition" href={item.href}>
                     {item.name}
                   </a>
                 </li>
               ))}
-
             </ul>
-
           </div>
 
         </div>
 
         {/* Bottom */}
-
-        <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
 
           <p className="text-sm text-slate-500 text-center md:text-left">
             © {new Date().getFullYear()} CrackTheCampus. All rights reserved.
           </p>
 
-          <div className="flex gap-6">
-
+          <div className="flex gap-6 md:gap-8">
             {legal.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm text-slate-500 hover:text-white transition"
-              >
+              <a key={item.name} href={item.href} className="text-sm text-slate-500 hover:text-white transition">
                 {item.name}
               </a>
             ))}
-
           </div>
 
         </div>
