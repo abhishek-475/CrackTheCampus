@@ -1,6 +1,22 @@
 export const stats = [
-  { label: "Students Placed", value: "10K+" },
-  { label: "Success Rate", value: "85%" },
-  { label: "Practice Questions", value: "2M+" },
-  { label: "Top Recruiters", value: "500+" },
+  {
+    number: 25000,
+    suffix: "+",
+    label: "Students"
+  },
+  {
+    number: 95,
+    suffix: "%",
+    label: "Success Rate"
+  },
+  {
+    number: 500,
+    suffix: "+",
+    label: "Companies"
+  },
+  {
+    number: 120,
+    suffix: "+",
+    label: "Mock Tests"
+  }
 ];

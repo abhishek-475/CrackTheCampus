@@ -1,31 +1,31 @@
 export const quickLinks = [
-  { name: "Features", href: "#features" },
   { name: "Courses", href: "#courses" },
-  { name: "Companies", href: "#companies" },
-  { name: "Testimonials", href: "#testimonials" },
+  { name: "Corporate Pathways", href: "#courses" },
+  { name: "Practice Assessments", href: "#courses" },
+  { name: "Monthly Challenges", href: "#courses" },
 ];
 
-export const resources = [
-  { name: "Practice Tests", href: "#courses" },
-  { name: "Mock Interviews", href: "#courses" },
-  { name: "Technical Resources", href: "#courses" },
+export const platform = [
+  { name: "AI Resume Builder", href: "#features" },
+  { name: "CTC Score", href: "#stats" },
+  { name: "Desktop Pro-Suite", href: "#features" },
+  { name: "Official Hiring Drives", href: "#companies" },
+];
+
+export const company = [
+  { name: "About CrackTheCampus", href: "#" },
+  { name: "Pricing", href: "#" },
+  { name: "Download App", href: "#" },
+  { name: "Documentation", href: "#" },
 ];
 
 export const support = [
-  { name: "Contact Us", href: "#footer" },
-  { name: "Help Center", href: "#footer" },
-  { name: "FAQs", href: "#footer" },
+  { name: "Help Center", href: "#" },
+  { name: "Contact Support", href: "#" },
+  { name: "FAQs", href: "#" },
 ];
 
 export const legal = [
-  { name: "Privacy Policy", href: "#" },
-  { name: "Terms & Conditions", href: "#" },
-];
-
-export const socialLinks = [
-  { name: "LinkedIn", href: "https://linkedin.com" },
-  { name: "Instagram", href: "https://instagram.com" },
-  { name: "Twitter", href: "https://twitter.com" },
-  { name: "YouTube", href: "https://youtube.com" },
-  { name: "GitHub", href: "https://github.com" },
+  { name: "Privacy Policy", href: "https://crackthecampus.com/privacy" },
+  { name: "Terms & Conditions", href: "https://crackthecampus.com/terms" },
 ];

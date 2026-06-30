@@ -1,64 +1,98 @@
 import { motion } from "framer-motion";
 import { companies } from "../../../data/companies";
 
-function Companies() {
+export default function Companies() {
   return (
-    <section className="relative py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute -top-20 left-10 w-72 h-72 rounded-full bg-blue-500/10 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-indigo-500/10 blur-3xl"></div>
+    <section
+      id="companies"
+      aria-labelledby="companies-heading"
+      className="relative overflow-hidden bg-slate-50 dark:bg-slate-950 py-24"
+    >
+      {/* Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-indigo-500/10 blur-3xl" />
+      </div>
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative mx-auto max-w-7xl px-6">
+
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto"
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-3xl text-center"
         >
-          <span className="inline-flex px-4 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 text-sm font-medium">
-            Trusted by Top Recruiters
+          <span className="inline-flex rounded-full bg-blue-100 dark:bg-blue-900/30 px-4 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300">
+            Trusted by Leading Recruiters
           </span>
 
-          <h2 className="mt-5 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
-            Our students work at the world's
+          <h2
+            id="companies-heading"
+            className="mt-5 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white"
+          >
+            Join learners placed at
             <span className="block bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">
-              leading companies
+              world-class companies
             </span>
           </h2>
 
           <p className="mt-5 text-lg text-slate-600 dark:text-slate-400">
-            Thousands of learners have secured opportunities at top technology
-            companies through focused preparation and interview practice.
+            Practice, prepare and get hired with structured learning paths trusted by students across India.
           </p>
         </motion.div>
 
-        {/* Logo Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="mt-14 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4"
-        >
-          {companies.map((company, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ y: -4, scale: 1.03 }}
-              className="group flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-24 p-4 hover:shadow-lg transition-all"
-            >
-              <img
-                src={company.logo}
-                alt={company.name}
-                className="max-h-8 w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition"
-              />
-            </motion.div>
-          ))}
-        </motion.div>
+        {/* Infinite Logo Marquee */}
+        <div className="relative mt-16 overflow-hidden">
+
+          {/* Fades */}
+          <div className="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent" />
+          <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent" />
+
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="flex w-max gap-6"
+          >
+            {[...companies, ...companies].map((company, index) => (
+              <div
+                key={`${company.name}-${index}`}
+                className="
+                  group
+                  flex h-24 w-48 shrink-0
+                  items-center justify-center
+                  rounded-2xl
+                  border border-slate-200 dark:border-slate-800
+                  bg-white/80 dark:bg-slate-900/80
+                  backdrop-blur-sm
+                  shadow-sm shadow-blue-500/10
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-blue-500/30
+                  hover:shadow-xl hover:shadow-blue-500/20
+                "
+              >
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  loading="lazy"
+                  className="
+                    max-h-9 w-auto object-contain
+                    md:grayscale md:opacity-80
+                    group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110
+                    transition-all duration-300
+                  "
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
 }
-
-export default Companies;

@@ -1,62 +1,81 @@
-import {
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 import {
   FaGithub,
   FaInstagram,
-  FaFacebook,
-  FaXTwitter,
   FaLinkedin,
-  FaYoutube
+  FaXTwitter,
+  FaYoutube,
 } from "react-icons/fa6";
 
+import {
+  quickLinks,
+  platform,
+  company,
+  support,
+  legal,
+} from "../../../data/footer";
+
+const socialLinks = [
+  {
+    icon: FaLinkedin,
+    href: "https://linkedin.com/company/crackthecampus",
+    label: "LinkedIn",
+  },
+  {
+    icon: FaInstagram,
+    href: "https://instagram.com/crackthecampus",
+    label: "Instagram",
+  },
+  {
+    icon: FaXTwitter,
+    href: "https://twitter.com/crackthecampus",
+    label: "Twitter",
+  },
+  {
+    icon: FaYoutube,
+    href: "https://youtube.com/@crackthecampus",
+    label: "YouTube",
+  },
+  {
+    icon: FaGithub,
+    href: "https://github.com/abhishek-475/CrackTheCampus",
+    label: "GitHub",
+  },
+];
+
+function FooterColumn({ title, items }) {
+  return (
+    <div>
+      <h3 className="mb-5 text-sm font-semibold tracking-wide uppercase text-white">
+        {title}
+      </h3>
+
+      <ul className="space-y-3">
+        {items.map((item) => (
+          <li key={item.name}>
+            <a
+              href={item.href}
+              className="text-sm text-slate-400 transition-colors duration-300 hover:text-blue-400"
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export default function Footer() {
-  const quickLinks = [
-    { name: "Features", href: "#features" },
-    { name: "Courses", href: "#courses" },
-    { name: "Companies", href: "#companies" },
-    { name: "Testimonials", href: "#testimonials" },
-  ];
-
-  const resources = [
-    { name: "Practice Tests", href: "#courses" },
-    { name: "Mock Interviews", href: "#courses" },
-    { name: "Technical Resources", href: "#courses" },
-    { name: "Placement Preparation", href: "#courses" },
-  ];
-
-  const support = [
-    { name: "Contact Us", href: "#footer" },
-    { name: "Help Center", href: "#footer" },
-    { name: "FAQs", href: "#footer" },
-  ];
-
-  const legal = [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms & Conditions", href: "#" },
-  ];
-
-  const socialLinks = [
-    { icon: FaLinkedin, href: "https://linkedin.com" },
-    { icon: FaInstagram, href: "https://instagram.com" },
-    { icon: FaXTwitter, href: "https://twitter.com" },
-    { icon: FaYoutube, href: "https://youtube.com" },
-    { icon: FaFacebook, href: "https://facebook.com" },
-    { icon: FaGithub, href: "https://github.com" },
-  ];
-
   return (
     <footer
       id="footer"
-      aria-label="Footer section"
-      className="bg-slate-950 text-slate-300 border-t border-slate-800"
+      className="border-t border-slate-800 bg-slate-950 text-slate-300"
     >
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="mx-auto max-w-7xl px-6 py-20">
 
-        <div className="grid gap-12 lg:grid-cols-5">
+        <div className="grid gap-12 lg:grid-cols-6">
 
           {/* Brand */}
           <div className="lg:col-span-2">
@@ -65,109 +84,84 @@ export default function Footer() {
               CrackTheCampus
             </h2>
 
-            <p className="mt-5 text-slate-400 leading-7 max-w-md">
-              India's placement preparation platform helping students
-              crack aptitude tests, coding rounds, technical interviews,
-              and dream company placements.
+            <p className="mt-5 max-w-md leading-7 text-slate-400">
+              An AI-powered Campus-to-Career platform helping students prepare
+              for placements through structured learning, company-specific
+              practice, mock assessments, and recruiter-focused preparation.
             </p>
 
-            {/* Contact */}
             <div className="mt-8 space-y-4 text-sm">
 
               <div className="flex items-center gap-3">
-                <Mail size={18} className="text-blue-500" />
+                <Mail className="text-blue-500" size={18} />
                 <span>support@crackthecampus.com</span>
               </div>
 
               <div className="flex items-center gap-3">
-                <Phone size={18} className="text-blue-500" />
-                <span>+91 98765 43210</span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <MapPin size={18} className="text-blue-500" />
-                <span>Kerala, India</span>
+                <MapPin className="text-blue-500" size={18} />
+                <span>Bengaluru, Karnataka, India</span>
               </div>
 
             </div>
 
             {/* Social */}
-            <div className="flex flex-wrap gap-3 mt-8">
-
-              {socialLinks.map((item, index) => {
+            <div className="mt-8 flex flex-wrap gap-3">
+              {socialLinks.map((item) => {
                 const Icon = item.icon;
 
                 return (
                   <a
-                    key={index}
+                    key={item.label}
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-xl border border-slate-800 hover:border-blue-500 hover:bg-blue-600 hover:text-white transition flex items-center justify-center"
+                    aria-label={item.label}
+                    className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 text-slate-400 transition-all duration-300 hover:border-blue-500 hover:bg-blue-600 hover:text-white"
                   >
                     <Icon size={18} />
                   </a>
                 );
               })}
-
             </div>
 
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-white mb-5">Quick Links</h3>
-            <ul className="space-y-3">
-              {quickLinks.map((item) => (
-                <li key={item.name}>
-                  <a className="text-sm text-slate-400 hover:text-white transition" href={item.href}>
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterColumn
+            title="Quick Links"
+            items={quickLinks}
+          />
 
-          {/* Resources */}
-          <div>
-            <h3 className="font-semibold text-white mb-5">Resources</h3>
-            <ul className="space-y-3">
-              {resources.map((item) => (
-                <li key={item.name}>
-                  <a className="text-sm text-slate-400 hover:text-white transition" href={item.href}>
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterColumn
+            title="Platform"
+            items={platform}
+          />
 
-          {/* Support */}
-          <div>
-            <h3 className="font-semibold text-white mb-5">Support</h3>
-            <ul className="space-y-3">
-              {support.map((item) => (
-                <li key={item.name}>
-                  <a className="text-sm text-slate-400 hover:text-white transition" href={item.href}>
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterColumn
+            title="Company"
+            items={company}
+          />
+
+          <FooterColumn
+            title="Support"
+            items={support}
+          />
 
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-slate-800 pt-8 md:flex-row">
 
-          <p className="text-sm text-slate-500 text-center md:text-left">
+          <p className="text-sm text-slate-500">
             © {new Date().getFullYear()} CrackTheCampus. All rights reserved.
           </p>
 
-          <div className="flex gap-6 md:gap-8">
+          <div className="flex flex-wrap justify-center gap-6">
             {legal.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm text-slate-500 hover:text-white transition">
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm text-slate-500 transition-colors hover:text-white"
+              >
                 {item.name}
               </a>
             ))}
