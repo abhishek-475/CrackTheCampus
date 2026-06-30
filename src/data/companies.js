@@ -21,7 +21,6 @@ export const companies = [
 
 
 
-  { name: "Salesforce", logo: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Salesforce_logo.svg" },
   { name: "VMware", logo: "https://cdn.simpleicons.org/vmware/607078" },
   { name: "Cloudflare", logo: "https://cdn.simpleicons.org/cloudflare/F38020" },
   { name: "Digital Ocean", logo: "https://cdn.simpleicons.org/digitalocean/0080FF" },

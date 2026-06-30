@@ -40,27 +40,22 @@ function Companies() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6"
+          className="mt-14 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4"
         >
           {companies.map((company, index) => (
             <motion.div
               key={index}
-              whileHover={{
-                y: -6,
-                scale: 1.04,
-              }}
-              transition={{ duration: 0.25 }}
-              className="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex items-center justify-center shadow-sm hover:shadow-xl hover:border-blue-300 dark:hover:border-blue-700 transition-all"
+              whileHover={{ y: -4, scale: 1.03 }}
+              className="group flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-24 p-4 hover:shadow-lg transition-all"
             >
               <img
                 src={company.logo}
                 alt={company.name}
-                className="h-10 w-auto object-contain grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+                className="max-h-8 w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition"
               />
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

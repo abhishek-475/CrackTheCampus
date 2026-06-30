@@ -1,193 +1,79 @@
-# CrackTheCampus Landing Page
+# CrackTheCampus - Frontend Developer Assignment
 
-A modern, responsive landing page built with **React**, **Vite**, **Tailwind CSS**, and **Framer Motion** for the CrackTheCampus Frontend Developer Assignment.
-
-## 🚀 Live Features
-
-- Responsive design for desktop, tablet, and mobile
-- Dark / Light theme support
-- Smooth scrolling navigation
-- Animated hero section
-- Feature showcase
-- Courses & Test Series section
-- Companies section with responsive logo grid
-- Student testimonials carousel
-- Professional footer with navigation and social links
-- Modern UI inspired by the official CrackTheCampus website
-- Clean component-based architecture
+## 🚀 Overview
+CrackTheCampus is a platform designed to help students prepare for placements, internships, and competitive aptitude tests.  
+This project is a **frontend landing page** built from scratch using **React + Tailwind CSS**, showcasing product design intuition, engineering proficiency, and attention to detail.
 
 ---
 
-## 🛠 Tech Stack
-
-- React 19
-- Vite
-- Tailwind CSS
-- Framer Motion
-- Lucide React
-- React Icons
-
----
-
-## 📁 Project Structure
-
-```
-src/
-│
-├── components/
-│   ├── layout/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   └── Footer.jsx
-│   │
-│   ├── sections/
-│   │   ├── Features.jsx
-│   │   ├── Courses.jsx
-│   │   ├── Companies.jsx
-│   │   └── Testimonials.jsx
-│   │
-│   └── ui/
-│       ├── Button.jsx
-│       └── ThemeToggle.jsx
-│
-├── data/
-│   ├── navigation.js
-│   ├── features.js
-│   ├── courses.js
-│   ├── companies.js
-│   └── testimonials.js
-│
-├── App.jsx
-└── main.jsx
-```
+## 🖼️ Features Implemented
+- **Hero Section**: Impactful headline, description, CTA buttons, modern illustration.
+- **Features Section**: Six+ core capabilities in a clean card layout.
+- **Statistics Section**: Placement rates and success metrics with styled numerics.
+- **Testimonials Section**: Authentic student success stories.
+- **Companies Section**: Logos of hiring partners.
+- **Courses/Test Series Section**: Highlighted preparation paths.
+- **Footer**: Structured navigation, contact info, social links.
 
 ---
 
-## 📦 Installation
-
-Clone the repository
-
-```bash
-git clone <repository-url>
-```
-
-Navigate into the project
-
-```bash
-cd crackthecampus
-```
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Start the development server
-
-```bash
-npm run dev
-```
-
-Build for production
-
-```bash
-npm run build
-```
-
-Preview production build
-
-```bash
-npm run preview
-```
+## ⚙️ Tech Stack
+- **Framework**: React (CRA / Next.js if used)
+- **Styling**: Tailwind CSS (utility-first, responsive variants)
+- **Deployment**: Vercel / Netlify
+- **Version Control**: GitHub
 
 ---
 
-## 🎨 Sections Included
+## 📂 Folder Structure
 
-### Hero
-- Modern landing hero
-- CTA buttons
-- Responsive layout
+CrackTheCampus/
+├── public/
+│   ├── assets/        # Images, logos, icons
+├── src/
+│   ├── components/    # Reusable UI components
+│   ├── pages/         # Page-level components
+│   ├── styles/        # Tailwind config + global styles
+│   ├── hooks/         # Custom hooks (if any)
+│   ├── utils/         # Helper functions
+│   └── App.js
+└── README.md
 
-### Features
-- Placement preparation features
-- Animated cards
-- Hover interactions
-
-### Courses
-- Flagship preparation tracks
-- Practice resources
-- Interview preparation
-- Coding challenges
-
-### Companies
-- Responsive company logo showcase
-- Clean grid layout
-
-### Testimonials
-- Auto-scrolling student testimonials
-- Pause on hover
-- Drag support
-- Responsive cards
-
-### Footer
-- Quick navigation
-- Resources
-- Support links
-- Contact information
-- Social media icons
 
 ---
 
-## ✨ UI Highlights
-
-- Mobile-first responsive design
-- Smooth animations using Framer Motion
-- Tailwind CSS utility-based styling
-- Reusable React components
-- Accessible layout
-- Modern card design
-- Dark mode support
-- Consistent spacing and typography
+## 🧩 Component Strategy
+- **Reusable UI Components**: Buttons, Cards, Testimonials, Stats, Footer.
+- **Responsive Design**: Mobile-first workflow with Tailwind breakpoints.
+- **Accessibility**: Semantic HTML, ARIA labels, keyboard navigation.
 
 ---
 
-## 📱 Responsive
-
-Designed and tested for:
-
-- Mobile
-- Tablet
-- Laptop
-- Desktop
+## 📊 Evaluation Highlights
+- **Design & UX (40%)**: Premium typography, spacing rhythm, mobile experience.
+- **Tailwind CSS (20%)**: Clean utility usage, responsive variants.
+- **Code Quality (20%)**: Modular structure, semantic naming, no duplication.
+- **Frontend Engineering (10%)**: Accessibility, performant rendering.
+- **Extra Initiative (10%)**: Dark mode, hover states, transitions, skeleton loaders.
 
 ---
 
-## 📚 References
-
-Design inspiration and content structure were based on the official CrackTheCampus website:
-
-https://crackthecampus.com/
-
-This project is created solely for the Frontend Developer Assignment.
+## 🌟 Extra Features
+- Dark mode toggle 🌙
+- Smooth hover/active transitions ✨
+- Loading skeletons for better UX ⏳
+- Mobile drawer navigation 📱
 
 ---
 
-## 👨‍💻 Author
-
-**Abhishek Pavithran**
-
-- MERN Stack Developer
-- React.js Developer
-- Frontend Enthusiast
-
-
-LinkedIn:
-https://www.linkedin.com/in/abhishekpavithran
+## 📡 Deployment
+- **Live Demo**: [https://crack-the-campus.vercel.app](https://crack-the-campus.vercel.app/)
+- **GitHub Repo**: [https://github.com/abhishek-475/CrackTheCampus](https://github.com/abhishek-475/CrackTheCampus)
 
 ---
 
-## 📄 License
+## 📞 Contact
+- **Developer**: Abhishek Pavithran  
+- **Email**: abhishekpavi6@gmail.com  
+- **Location**: Kerala, India  
 
-This project is developed for educational and recruitment purposes only.

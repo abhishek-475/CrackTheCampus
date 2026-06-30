@@ -1,32 +1,49 @@
-import React from 'react'
+import React from 'react';
+import heroImage from '../../assets/images/hero.jpg';
 
 function Hero() {
-    return (
+  return (
+    <section
+      id="hero"
+      className="relative py-24 bg-cover bg-center"
+      style={{ backgroundImage: `url(${heroImage})` }}
+    >
+      {/* Overlay for better text contrast */}
+      <div className="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
 
-        <section  id="hero" className="py-24">
-            <div className="max-w-7xl mx-auto px-6">
-
-                <h1 className="
+      <div className="relative max-w-7xl mx-auto px-6 text-center md:text-left">
+        <h1
+          className="
             text-5xl
             font-bold
-            text-slate-900
-            dark:text-white
-        ">
-                    Crack Your Dream Placement
-                </h1>
+            text-white
+          "
+        >
+          Crack Your Dream Placement
+        </h1>
 
-                <p className="
+        <p
+          className="
             mt-6
-            text-slate-600
-            dark:text-slate-300
-        ">
-                    Prepare for coding interviews, aptitude, and placements.
-                </p>
+            text-lg
+            text-gray-200
+          "
+        >
+          Prepare for coding interviews, aptitude, and placements.
+        </p>
 
-            </div>
-        </section>
-
-    )
+        {/* CTA Buttons */}
+        <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+          <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+            Get Started
+          </button>
+          <button className="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Hero
+export default Hero;

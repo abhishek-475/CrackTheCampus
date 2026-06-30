@@ -1,9 +1,5 @@
 const navigation = [
-    {
-        id: "hero",
-        name: "Home",
-        href: "#hero",
-    },
+  
     {
         id: "features",
         name: "Features",
