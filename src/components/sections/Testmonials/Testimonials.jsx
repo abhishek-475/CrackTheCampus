@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Quote, Star } from "lucide-react";
 import { testimonials } from "../../../data/testimonials";
+import Section from "../../ui/Section";
 
 export default function Testimonials() {
   const controls = useAnimation();
@@ -28,7 +29,7 @@ export default function Testimonials() {
   const resume = () => startAnimation();
 
   return (
-    <section
+    <Section id="testimonials"
       className="relative py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden"
       aria-label="Testimonials section"
     >
@@ -36,7 +37,7 @@ export default function Testimonials() {
       <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent z-20" />
       <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent z-20" />
 
-      <div className="max-w-7xl mx-auto px-6">
+      
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold text-slate-900 dark:text-white">
@@ -120,7 +121,7 @@ export default function Testimonials() {
             ))}
           </motion.div>
         </div>
-      </div>
-    </section>
+      
+    </Section>
   );
 }

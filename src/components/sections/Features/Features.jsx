@@ -1,13 +1,15 @@
 import { features } from "../../../data/features";
 import FeatureCard from "./FeatureCard";
+import Section from "../../ui/Section";
 
 export default function Features() {
   return (
-    <section
+    <Section
       id="features"
       className="py-24 bg-white dark:bg-slate-950"
+      ariaLabel="Features section"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      
 
         {/* header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -33,7 +35,7 @@ export default function Features() {
           ))}
         </div>
 
-      </div>
-    </section>
+      
+    </Section>
   );
 }

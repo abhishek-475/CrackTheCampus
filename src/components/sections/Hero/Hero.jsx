@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
 import Button from "../../ui/Button";
+import Section from "../../ui/Section";
 import { ArrowRight, Play, Users, Target, TrendingUp } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section
+    <Section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden px-6 py-20 md:py-28 bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950"
-      aria-label="Hero section"
+      ariaLabel="Hero section"
+      className="relative min-h-screen flex items-center bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950"
     >
       {/* background orbs */}
       <div className="absolute -top-32 -right-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" />
 
-      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-14 items-center">
+      {/* GRID WRAPPER (important fix) */}
+      <div className="grid md:grid-cols-2 gap-14 items-center w-full">
 
         {/* LEFT CONTENT */}
         <motion.div
@@ -25,7 +27,7 @@ export default function Hero() {
 
           {/* badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-sm font-medium">
-             Built for placement-driven preparation
+            Built for placement-driven preparation
           </div>
 
           {/* headline */}
@@ -94,7 +96,6 @@ export default function Hero() {
             {/* MAIN CARD */}
             <div className="relative bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/60 dark:border-slate-700/40 rounded-3xl shadow-2xl p-6">
 
-              {/* top bar */}
               <div className="flex items-center gap-2 mb-6">
                 <span className="w-3 h-3 rounded-full bg-red-400" />
                 <span className="w-3 h-3 rounded-full bg-yellow-400" />
@@ -104,7 +105,6 @@ export default function Hero() {
                 </span>
               </div>
 
-              {/* mock content */}
               <div className="space-y-4">
 
                 <div className="p-4 rounded-xl bg-slate-100 dark:bg-slate-800">
@@ -151,6 +151,6 @@ export default function Hero() {
         </motion.div>
 
       </div>
-    </section>
+    </Section>
   );
 }
