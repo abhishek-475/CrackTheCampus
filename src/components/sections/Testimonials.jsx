@@ -5,7 +5,7 @@ import { testimonials } from "../../data/testimonials";
 
 export default function Testimonials() {
   const controls = useAnimation();
-  const [speed, setSpeed] = useState(40);
+  const [speed, setSpeed] = useState(50);
 
   const startAnimation = (duration = speed) => {
     controls.start({
